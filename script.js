@@ -18,16 +18,14 @@ const awesomeBooks = [
         
     },
 ];
-const buttonAdd = document.querySelector('#add-btn');
-const buttonRemove = document.querySelector('.remove-btn');
-const ourZone = document.querySelector('.book-content');
-function accessBook(m){
-    ourZone.innerHTML = `
-<p>${awesomeBooks[m].title}</p>
-<p>${awesomeBooks[m].author}</p>
-
-<hr>
-`
+for(i = 0; i < awesomeBooks.length; i++) {
+    const details = awesomeBooks[i];
+    ourZone.innerHTML += `
+    <P>${details.title}</P>
+    <P>${details.author}</P>
+    <button type="button">${details.buttonRemove}</button>
+    <hr>
+    `;
 }
 
 
