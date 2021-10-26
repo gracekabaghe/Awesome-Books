@@ -22,14 +22,22 @@ function addBookToList(newBook) {
   return document.querySelector('.books').innerHTML;
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-  if (bookList !== null) {
-    storedData = [...JSON.parse(localStorage.getItem('localBookList'))];
-    storedData.forEach((item) => {
-      addBookToList(item);
-    });
-  }
-});
+//document.addEventListener('DOMContentLoaded', () => {
+//  if (bookList !== null) {
+ //   storedData = JSON.parse(localStorage.getItem('localBookList'));
+ //   storedData.forEach((item) => addBookToList.push(item));
+ // }
+//});
+ function retrieveData() {
+   storedData = [];
+   const fromData = JSON.parse(localStorage.getItem('localBookList'));
+   fromData.forEach((item) => storedData.push(item));
+ }
+
+ function serveData(localBookList) {
+   localStorage.setItem('localBookList', JSON.stringify(localBookList));
+ }
+
 
 const addBook = document.querySelector('#add-book');
 addBook.addEventListener('click', (e) => {
