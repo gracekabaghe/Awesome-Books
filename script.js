@@ -30,3 +30,14 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 });
+
+const addBook = document.querySelector('#add-book');
+addBook.addEventListener('click', (e) => {
+  const newBook = new Book(title.value, author.value);
+  e.preventDefault();
+  addBookToList(newBook);
+  storedData.push(newBook);
+  title.value = '';
+  author.value = '';
+  localStorage.setItem('localBookList', JSON.stringify(storedData));
+});
