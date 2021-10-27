@@ -35,7 +35,7 @@ const removeAbook = (index) => {
   }
 };
 
-function addBookToList(newBook) {
+const addBookToList = (newBook) => {
   bookListBlock.innerHTML += `
   <div class="bookList">
     <h4 class="title">Title: ${newBook.title}<h4> 
