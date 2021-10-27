@@ -43,7 +43,7 @@ const addBookToList = (newBook) => {
     <button type="submit" class="remove">Remove</button>
   </div>
   <hr>`;
-}
+};
 
 if (localStorage.getItem('localBookList')) {
   retriveData();
