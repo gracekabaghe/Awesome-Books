@@ -20,8 +20,8 @@ const addBooks = () => {
     author: author.value,
   };
   storedData.push(bookToStore);
- serveData(storedData);
-}
+  serveData(storedData);
+};
 
 const addButton = document.querySelector('#addBook');
 addButton.addEventListener('click', addBooks);
@@ -33,7 +33,7 @@ const removeAbook = (index) => {
   if (storedData.length < 1) {
     localStorage.clear();
   }
-}
+};
 
 function addBookToList(newBook) {
   bookListBlock.innerHTML += `
