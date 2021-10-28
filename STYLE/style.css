@@ -1,75 +1,84 @@
-body {
-  margin: 20px;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 ul {
   display: flex;
-  align-items: center;
+  gap: 10px;
   list-style: none;
-  margin: 0;
 }
 
-.title {
-  font-size: 20px;
-  padding: 4px;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+.list-btn {
+  display: flex;
+  gap: 10px;
+  padding-right: 10px;
+  margin-bottom: 5%;
 }
 
-.author {
-  font-family: sans-serif;
+div.list-btn:nth-child(2n + 1) {
+  background-color: #d3d3d3;
 }
 
-h1,
-h2 {
-  text-align: center;
-}
-
-.by {
-  margin: 0 5px;
+#remove {
+  margin-left: auto;
+  height: 30px;
+  margin-top: 10px;
+  background-color: #fff;
 }
 
 form {
   display: flex;
   flex-direction: column;
-  padding-top: 30px;
+  padding: 0 24%;
+  margin-top: 15%;
+  width: 50%;
 }
 
-.all_books {
-  border: 2px solid rgb(235, 235, 235);
-  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
-  border-radius: 100px;
-}
-
-.list-btn {
+h1 {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 4px;
+  justify-content: center;
+  margin-bottom: 20%;
 }
 
-main {
-  width: 50%;
-  margin: auto;
+h3 {
+  display: flex;
+  justify-content: center;
+  margin: 10% 0;
 }
 
-#title,
-#author {
-  width: 50%;
-  margin: auto;
-  height: 30px;
-  margin-bottom: 5px;
-  border-radius: 6px;
+.books {
+  margin-bottom: 10%;
 }
 
-button {
+hr {
   width: 20%;
-  height: 36px;
-  border: 1px solid;
-  border-radius: 5px;
+  border: 1px solid #111;
+}
+
+#author {
+  margin: 0;
+}
+
+input {
+  margin-bottom: -20px;
 }
 
 #add {
-  align-self: center;
+  margin-top: -25px;
+  width: 25%;
+  margin-left: 75%;
+}
+
+@media screen and (min-width: 768px) {
+  .list-btn {
+    margin-bottom: -50px;
+  }
+
+  h1 {
+    margin-bottom: 10%;
+  }
+
+  h3 {
+    margin: 5% 0;
+  }
+
+  form {
+    margin-top: 5%;
+  }
 }
