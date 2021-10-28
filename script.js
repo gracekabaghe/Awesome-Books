@@ -32,12 +32,10 @@ class Book {
               <div class="list-btn">
               <ul class="list">
                   <li class="title">${value.name}</li>
-                  <p class="by">by</p>
-                  <li class="author">${value.author}</li>
+                  <li class="author"> by ${value.author}</li>
               </ul>
               <button id="remove" onclick="remove(${index});">remove</button>
               </div>
-              <hr>
               </div>`;
     });
   }
