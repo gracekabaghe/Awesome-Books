@@ -68,7 +68,7 @@ const navListBtn = document.querySelector('#add-list');
 const addNewBtn = document.querySelector('#add-new');
 const contactBtn = document.querySelector('#contact');
 const myBookList = document.querySelector('body > main > div.awesome');
-const formInput = document .querySelector('body > main > section');
+const formInput = document.querySelector('body > main > section');
 const contactPage = document.querySelector('body > main > div.container.d-flex');
 const myTime = document.querySelector('body > main > div.set-time > p');
 const { DateTime } = this.luxon;
@@ -77,21 +77,21 @@ const myListPage = () => {
   contactPage.style.display = 'none';
   formInput.style.display = 'none';
   myBookList.style.display = 'block';
-}
+};
 navListBtn.addEventListener('click', myListPage);
 
 const addNewPage = () => {
   myBookList.style.display = 'none';
   contactPage.style.display = 'none';
   formInput.style.display = 'block';
-}
+};
 addNewBtn.addEventListener('click', addNewPage);
 
 const contInfoPage = () => {
   myBookList.style.display = 'none';
   formInput.style.display = 'none';
   contactPage.style.display = 'block';
-}
+};
 contactBtn.addEventListener('click', contInfoPage);
 
 // mobile menu
