@@ -1,63 +1,68 @@
-const bookListBlock = document.querySelector('.bookList');
-const title = document.getElementById('title');
-const author = document.getElementById('author');
+const divbooks = document.querySelector('.books');
+const inputTitle = document.querySelector('#title');
+const inputAuthor = document.querySelector('#author');
+const addBtn = document.querySelector('#add');
 
-let storedData = [];
 
-function retriveData() {
-  storedData = [];
-  const fromData = JSON.parse(localStorage.getItem('localBookList'));
-  fromData.forEach((elem) => storedData.push(elem));
-}
 
-function serveData(books) {
-  localStorage.setItem('localBookList', JSON.stringify(books));
-}
 
-const addBooks = () => {
-  const bookToStore = {
-    title: title.value,
-    author: author.value,
-  };
-  storedData.push(bookToStore);
-  serveData(storedData);
-};
-
-const addButton = document.querySelector('#addBook');
-addButton.addEventListener('click', addBooks);
-
-const removeAbook = (index) => {
-  storedData.splice(index, 1);
-  serveData(storedData);
-  window.location.reload(false);
-  if (storedData.length < 1) {
-    localStorage.clear();
+class Book {
+  constructor(savedData = []) {
+    this.arr = savedData;
   }
-};
 
-const addBookToList = (newBook) => {
-  bookListBlock.innerHTML += `
-  <div class="bookList">
-    <h4 class="title">Title: ${newBook.title}<h4> 
-    <h4 class="title">Author: ${newBook.author}</h4>
-    <button type="submit" class="remove">Remove</button>
-  </div>
-  <hr>`;
-};
+  saveData(data) {
+    let existing = JSON.parse(localStorage.getItem('book'));
+    existing = existing || [];
+    this.arr = existing;
+    this.arr.push(data);
+    localStorage.setItem('book', JSON.stringify(this.arr));
+  }
 
-if (localStorage.getItem('localBookList')) {
-  retriveData();
-  storedData.forEach((newBook) => {
-    addBookToList(newBook);
-  });
-} else {
-  storedData.forEach((newBook) => {
-    addBookToList(newBook);
-  });
+  removeBook = (index) => {
+    if (index !== null && index !== undefined) {
+      this.arr.splice(index, 1);
+      localStorage.setItem('book', JSON.stringify(this.arr));
+      this.getData();
+    }
+  };
+
+  getData() {
+    divbooks.innerHTML = '';
+    this.arr.forEach((value, index) => {
+      divbooks.innerHTML += `
+              <div class="books">
+              <div class="list-btn">
+              <ul class="list">
+                  <li class="title">${value.name}</li>
+                  <p class="by">by</p>
+                  <li class="author">${value.author}</li>
+              </ul>
+              <button id="remove" onclick="remove(${index});">remove</button>
+              </div>
+              <hr>
+              </div>`;
+    });
+  }
 }
 
-const removeBtnBook = document.querySelectorAll('.remove');
-const removeBtn = Array.from(removeBtnBook);
-removeBtn.forEach((newBook) => newBook.addEventListener('click', () => {
-  removeAbook(removeBtn.indexOf(newBook));
-}));
+let collection = JSON.parse(localStorage.getItem('book'));
+
+if (collection === null) {
+  collection = [];
+}
+const bookArr = new Book(collection);
+addBtn.addEventListener('click', (e) => {
+  e.preventDefault();
+  const book1 = { name: inputTitle.value, author: inputAuthor.value };
+  if (inputTitle.value.length > 0 && inputAuthor.value.length > 0) {
+    bookArr.saveData(book1);
+    bookArr.getData();
+  } else {
+    alert('please fill all the inputs');
+  }
+});
+
+const remove = (index) => bookArr.removeBook(index);
+remove();
+bookArr.getData();
