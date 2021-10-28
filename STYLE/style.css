@@ -1,4 +1,27 @@
-ul {
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.awesome {
+  display: none;
+}
+
+.d-flex {
+  display: none;
+}
+
+.menu {
+  background-color: #d3d3d3;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: center;
+}
+
+
+.list {
   display: flex;
   gap: 10px;
   list-style: none;
@@ -33,7 +56,6 @@ form {
 h1 {
   display: flex;
   justify-content: center;
-  margin-bottom: 20%;
 }
 
 h3 {
@@ -43,6 +65,8 @@ h3 {
 }
 
 .books {
+  margin-left: 10px;
+  margin-right: 10px;
   margin-bottom: 10%;
 }
 
@@ -65,9 +89,69 @@ input {
   margin-left: 75%;
 }
 
+
+.hamburger div {
+  width: 20px;
+  height: 2px;
+  background-color: #fff;
+  margin: 3px;
+  transition: all 0.3s ease;
+}
+
+.hamburger {
+  position: absolute;
+  width: 30px;
+  margin-top: 35px;
+  cursor: pointer;
+  margin-left: 370px;
+  background-color: black;
+}
+
+.turn .line1 {
+  transform: rotate(-45deg) translate(-3px, 4px);
+}
+
+.turn .line2 {
+  opacity: 0;
+}
+
+.turn .line3 {
+  transform: rotate(45deg) translate(-3px, -4px);
+}
+
+.nav-active {
+  display: flex;
+  list-style-type: none;
+  background-color: #3c3a39;
+  position: absolute;
+  margin-top: -53px;
+  margin-left: -40px;
+  display: none;
+  width: 100%;
+  height: 590px;
+}
+
+.nav-list {
+  display: none;
+}
+
+.logo {
+  display: none;
+}
+
+.footer-div {
+  display: flex;
+  justify-content: center;
+  padding-top: 27%;
+}
+
 @media screen and (min-width: 768px) {
   .list-btn {
     margin-bottom: -50px;
+  }
+
+  .hamburger {
+    display: none;
   }
 
   h1 {
@@ -81,4 +165,26 @@ input {
   form {
     margin-top: 5%;
   }
+
+  
+.logo {
+  width: 50%;
+  display: flex;
+  justify-content: left;
+  margin-top: 15px;
+}
+
+.nav-active {
+  display: none;
+}
+
+.nav-list {
+  cursor: pointer;
+  display: flex;
+  justify-content: right;
+  list-style: none;
+  width: 300px;
+  gap: 30px;
+}
+
 }
