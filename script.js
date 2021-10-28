@@ -61,3 +61,56 @@ addBtn.addEventListener('click', (e) => {
 const remove = (index) => bookArr.removeBook(index);
 remove();
 bookArr.getData();
+
+// Add navigation
+
+const navListBtn = document.querySelector('#add-list');
+const addNewBtn = document.querySelector('#add-new');
+const contactBtn = document.querySelector('#contact');
+const myBookList = document.querySelector('body > main > div.awesome');
+const formInput = document .querySelector('body > main > section');
+const contactPage = document.querySelector('body > main > div.container.d-flex');
+
+const myListPage = () => {
+  contactPage.style.display = 'none';
+  formInput.style.display = 'none';
+  myBookList.style.display = 'block';
+}
+navListBtn.addEventListener('click', myListPage);
+
+const addNewPage = () => {
+  myBookList.style.display = 'none';
+  contactPage.style.display = 'none';
+  formInput.style.display = 'block';
+}
+addNewBtn.addEventListener('click', addNewPage);
+
+const contInfoPage = () => {
+  myBookList.style.display = 'none';
+  formInput.style.display = 'none';
+  contactPage.style.display = 'block';
+}
+contactBtn.addEventListener('click', contInfoPage);
+
+// mobile menu
+
+const menuWord = document.getElementsByClassName('nav-link');
+const hamburger = document.querySelector('.hamburger');
+const listMenu = document.querySelector('body > main > div.menu > nav > ul');
+
+const menuAppear = () => {
+  hamburger.addEventListener('click', () => {
+    listMenu.classList.toggle('nav-active');
+    hamburger.classList.toggle('turn');
+  });
+};
+const menuDisappear = () => {
+  for (let i = 0; i < menuWord.length; i += 1) {
+    menuWord[i].addEventListener('click', () => {
+      listMenu.classList.remove('nav-active');
+      hamburger.classList.remove('turn');
+    });
+  }
+};
+menuAppear();
+menuDisappear();
