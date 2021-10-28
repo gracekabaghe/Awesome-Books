@@ -1,4 +1,75 @@
 body {
-  margin: 0;
+  margin: 20px;
   padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+}
+
+.title {
+  font-size: 20px;
+  padding: 4px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.author {
+  font-family: sans-serif;
+}
+
+h1,
+h2 {
+  text-align: center;
+}
+
+.by {
+  margin: 0 5px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  padding-top: 30px;
+}
+
+.all_books {
+  border: 2px solid rgb(235, 235, 235);
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+  border-radius: 100px;
+}
+
+.list-btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 4px;
+}
+
+main {
+  width: 50%;
+  margin: auto;
+}
+
+#title,
+#author {
+  width: 50%;
+  margin: auto;
+  height: 30px;
+  margin-bottom: 5px;
+  border-radius: 6px;
+}
+
+button {
+  width: 20%;
+  height: 36px;
+  border: 1px solid;
+  border-radius: 5px;
+}
+
+#add {
+  align-self: center;
 }
