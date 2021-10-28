@@ -21,39 +21,40 @@ Additional description about the project and its features.
 
 ## Getting Started
 
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
-
-
 To get a local copy up and running follow these simple example steps.
 
+Clone the project by:
+
+git clone https://github.com/gracekabaghe/Awesome-Books/tree/navigation
+
+cd into the project folder by:
+
+cd My-Portfolio
+
+Open folder with code editor
 ### Prerequisites
 
-### Setup
-
-### Install
-
-### Usage
-
-### Run tests
-
-### Deployment
-
+- Web Browser.
+- Code Editor.
 
 
 ## Authors
 
-👤 **Author1**
+👤 **SadiQ HabiL**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@kingqabil](https://github.com/kingqabil)
+- Twitter: [@kingqabil](https://twitter.com/kingqabil)
+- LinkedIn: [@kingqabil](https://linkedin.com/in/kingqabil)
 
-👤 **Author2**
+👤 **Roland Manful Mweze**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [Rolandm99](https://github.com/RolandM99)
+- Twitter: [@Manfulmwez](https://twitter.com/ManfulMwez)
+- LinkedIn: [Roland N. MWEZE](https://www.linkedin.com/in/roland-n-mweze-8b1045189/)
+
+👤 **Grace Kabaghe**
+
+- GitHub: [@githubhandle](https://github.com/gracekabaghe)
 
 ## 🤝 Contributing
 
