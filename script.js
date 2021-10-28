@@ -3,9 +3,6 @@ const inputTitle = document.querySelector('#title');
 const inputAuthor = document.querySelector('#author');
 const addBtn = document.querySelector('#add');
 
-
-
-
 class Book {
   constructor(savedData = []) {
     this.arr = savedData;
