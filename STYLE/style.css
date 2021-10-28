@@ -7,6 +7,12 @@ body {
   display: none;
 }
 
+.today-date {
+  display: flex;
+  justify-content: right;
+  margin-right: 30px;
+}
+
 .d-flex {
   display: none;
 }

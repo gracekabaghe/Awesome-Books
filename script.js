@@ -70,6 +70,8 @@ const contactBtn = document.querySelector('#contact');
 const myBookList = document.querySelector('body > main > div.awesome');
 const formInput = document .querySelector('body > main > section');
 const contactPage = document.querySelector('body > main > div.container.d-flex');
+const myTime = document.querySelector('body > main > div.set-time > p');
+const { DateTime } = this.luxon;
 
 const myListPage = () => {
   contactPage.style.display = 'none';
@@ -114,3 +116,5 @@ const menuDisappear = () => {
 };
 menuAppear();
 menuDisappear();
+
+setInterval(() => { myTime.innerHTML = `${DateTime.now().toLocaleString(DateTime.DATETIME_MED)}`; }, 1000);
