@@ -10,22 +10,18 @@ body {
 .today-date {
   display: flex;
   justify-content: right;
-  margin-right: 30px;
+  margin-right: 45px;
 }
 
 .d-flex {
   display: none;
 }
 
-.menu {
-  background-color: #d3d3d3;
-}
-
 .navbar-container {
   display: flex;
   justify-content: center;
+  background: #fff;
 }
-
 
 .list {
   display: flex;
@@ -76,11 +72,6 @@ h3 {
   margin-bottom: 10%;
 }
 
-hr {
-  width: 20%;
-  border: 1px solid #111;
-}
-
 #author {
   margin: 0;
 }
@@ -95,7 +86,6 @@ input {
   margin-left: 75%;
 }
 
-
 .hamburger div {
   width: 20px;
   height: 2px;
@@ -105,12 +95,12 @@ input {
 }
 
 .hamburger {
-  position: absolute;
   width: 30px;
   margin-top: 35px;
   cursor: pointer;
-  margin-left: 370px;
-  background-color: black;
+  margin-left: 292px;
+  background-color: #d3d3d3;
+  color: #111;
 }
 
 .turn .line1 {
@@ -132,7 +122,6 @@ input {
   position: absolute;
   margin-top: -53px;
   margin-left: -40px;
-  display: none;
   width: 100%;
   height: 590px;
 }
@@ -147,13 +136,22 @@ input {
 
 .footer-div {
   display: flex;
-  justify-content: center;
-  padding-top: 27%;
+  justify-content: flex-start;
+  padding-left: 2%;
+  border: 1px solid #111;
+  margin: 50% 5% 0 2%;
+}
+
+#div-contact {
+  margin: auto;
+  width: 70%;
+  padding-bottom: 13%;
 }
 
 @media screen and (min-width: 768px) {
   .list-btn {
     margin-bottom: -50px;
+    margin-right: 18px;
   }
 
   .hamburger {
@@ -170,27 +168,56 @@ input {
 
   form {
     margin-top: 5%;
+    padding-bottom: 13%;
   }
 
-  
-.logo {
-  width: 50%;
-  display: flex;
-  justify-content: left;
-  margin-top: 15px;
-}
+  .logo {
+    width: 50%;
+    display: flex;
+    justify-content: left;
+    margin-top: 15px;
+  }
 
-.nav-active {
-  display: none;
-}
+  .nav-active {
+    display: none;
+  }
 
-.nav-list {
-  cursor: pointer;
-  display: flex;
-  justify-content: right;
-  list-style: none;
-  width: 300px;
-  gap: 30px;
-}
+  .nav-list {
+    cursor: pointer;
+    display: flex;
+    justify-content: right;
+    list-style: none;
+    width: 300px;
+    gap: 30px;
+  }
 
+  #div-contact {
+    margin: auto;
+    width: 70%;
+    padding-bottom: 13%;
+  }
+
+  .contact-info {
+    margin: auto;
+    width: 50%;
+  }
+
+  span {
+    padding-left: 2%;
+  }
+
+  .nav-link:not(:last-child) {
+    border-right: 1px solid #111;
+    padding-right: 15px;
+  }
+
+  .navbar-container {
+    border: 1px solid #111;
+    margin: 22px 42px 24px 22px;
+    padding: 0 10px;
+  }
+
+  .footer-div {
+    margin: 21% 5% 0 2%;
+  }
 }
