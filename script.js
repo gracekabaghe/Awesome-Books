@@ -96,25 +96,26 @@ contactBtn.addEventListener('click', contInfoPage);
 
 // mobile menu
 
-const menuWord = document.getElementsByClassName('nav-link');
+const menu = document.querySelector('.mobile');
+const menuItems = document.querySelectorAll('.nav-tag');
 const hamburger = document.querySelector('.hamburger');
-const listMenu = document.querySelector('body > main > div.menu > nav > ul');
-
-const menuAppear = () => {
-  hamburger.addEventListener('click', () => {
-    listMenu.classList.toggle('nav-active');
-    hamburger.classList.toggle('turn');
-  });
-};
-const menuDisappear = () => {
-  for (let i = 0; i < menuWord.length; i += 1) {
-    menuWord[i].addEventListener('click', () => {
-      listMenu.classList.remove('nav-active');
-      hamburger.classList.remove('turn');
-    });
+const closeIcon = document.querySelector('.closeIcon');
+const hamb = document.querySelector('.hamb');
+closeIcon.style.display = 'none';
+function toggleMenu() {
+  if (menu.classList.contains('showMenu')) {
+    menu.classList.remove('showMenu');
+    closeIcon.style.display = 'none';
+  } else {
+    menu.classList.add('showMenu');
+    closeIcon.style.display = 'block';
   }
-};
-menuAppear();
-menuDisappear();
-
+}
+hamburger.addEventListener('click', toggleMenu);
+hamb.addEventListener('click', toggleMenu);
+menuItems.forEach(
+  (menuItem) => {
+    menuItem.addEventListener('click', toggleMenu);
+  },
+);
 setInterval(() => { myTime.innerHTML = `${DateTime.now().toLocaleString(DateTime.DATETIME_MED)}`; }, 1000);

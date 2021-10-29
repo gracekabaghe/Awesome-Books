@@ -86,23 +86,6 @@ input {
   margin-left: 75%;
 }
 
-.hamburger div {
-  width: 20px;
-  height: 2px;
-  background-color: #fff;
-  margin: 3px;
-  transition: all 0.3s ease;
-}
-
-.hamburger {
-  width: 30px;
-  margin-top: 35px;
-  cursor: pointer;
-  margin-left: 292px;
-  background-color: #d3d3d3;
-  color: #111;
-}
-
 .turn .line1 {
   transform: rotate(-45deg) translate(-3px, 4px);
 }
@@ -146,6 +129,68 @@ input {
   margin: auto;
   width: 70%;
   padding-bottom: 13%;
+}
+
+.mobile {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 900px;
+  background-color: #444343;
+  transform: translateY(-200%);
+  list-style: none;
+  padding-top: 100px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 99;
+  transition: transform 0.5s;
+  opacity: 0.9;
+}
+
+.showMenu {
+  transform: translateY(0);
+}
+
+.hamburger {
+  position: fixed;
+  top: 3%;
+  margin: -9px 44px 0 292px;
+  z-index: 100;
+  right: 0;
+  cursor: pointer;
+  border: none;
+  color: #fff;
+  font-size: 30px;
+  cursor: pointer;
+  background-color: #444343;
+}
+
+.menuMenu {
+  list-style: none;
+}
+
+.menuMenu a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 30px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  margin-left: 30%;
+}
+
+.menu-mobile {
+  margin-top: 20px;
+  margin-left: 100px;
+}
+
+.hamb {
+  font-size: 30px;
+  color: #272a31;
+  padding-bottom: 30px;
+  margin-left: 150px;
 }
 
 @media screen and (min-width: 768px) {
@@ -219,5 +264,13 @@ input {
 
   .footer-div {
     margin: 21% 5% 0 2%;
+  }
+
+  .mobile {
+    display: none;
+  }
+
+  .menu-mobile {
+    display: none;
   }
 }

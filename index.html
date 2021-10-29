@@ -6,9 +6,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://cdn.jsdelivr.net/npm/luxon@2.0.2/build/global/luxon.min.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="STYLE/style.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
  <title> Awesome Books</title>
 </head>
 <body>
+  <div class="mobile">
+    <ul class="menuMenu">
+            <li class="nav-tag">
+            <a  href="#addNew"></a>
+            </li>
+            <li class="nav-tag nav-tag-abt">
+            <a  href="#addNew">Add New</a>
+            </li>
+            <li class="nav-tag nav-tag-abt">
+              <a  href="#contactus">Contact</a>
+              </li>
+    </ul>
+    <button type="button" class ="hamburger">
+        <i class="closeIcon fas fa-times"></i>
+    </button>
+</div>
   <main class="main-container">
     <div class="menu">
       <nav class="navbar-container">
@@ -18,11 +35,9 @@
           <li id="add-new" class="nav-link">Add New</li>
           <li id="contact" class="nav-link">Contact</li>
         </ul>
-        <div class="hamburger">
-          <div class="line1"></div>
-          <div class="line2"></div>
-          <div class="line3"></div>
-        </div>
+        <div class="menu-mobile">
+          <i class="fas fa-bars hamb"></i>
+      </div>
       </nav>
     </div>
     <div class="set-time">
@@ -32,7 +47,7 @@
       <h1>Awesome Books</h1>
       <div class="books"></div>
     </div>
-    <section class="input-data">
+    <section id="addNew" class="input-data">
       <h3>Add A Book</h3>
       <form method="get">
         <input id="title" type="text" placeholder="Title" required><br><br>
@@ -40,7 +55,7 @@
         <button type="submit" id="add">Add</button>
       </form>
     </section>
-    <div class="container d-flex">
+    <div id="contactus" class="container d-flex">
       <section id="div-contact">
         <h2 class="contact-info">Contact Information</h2>
           <ul class="contactInfo d-none">
